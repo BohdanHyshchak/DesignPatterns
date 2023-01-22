@@ -1,6 +1,6 @@
-package abstractFactory.client
+package abstractFactory.classes.client
 
-import abstractFactory.factory.FruitFactory
+import abstractFactory.classes.factory.FruitFactory
 
 class FruitShop(factory: FruitFactory) {
 

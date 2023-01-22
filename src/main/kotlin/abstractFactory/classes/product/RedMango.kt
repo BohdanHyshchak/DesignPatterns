@@ -1,4 +1,4 @@
-package abstractFactory.product
+package abstractFactory.classes.product
 
 
 class RedMango : Mango {

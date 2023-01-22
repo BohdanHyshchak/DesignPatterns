@@ -1,28 +1,12 @@
-import abstractFactory.client.FruitShop
-import abstractFactory.factory.FruitFactory
-import abstractFactory.factory.RedFactory
-import abstractFactory.factory.YellowFactory
+import abstractFactory.AbstractFactoryExecutor
+import proxy.ProxyExecutor
 
-
-// Abstract Factory pattern
-private val abstractFactoryConcreteType = AbstractFactoryVariety.RED
-lateinit var abstractFactory: FruitFactory
-lateinit var shop: FruitShop
 fun main(args: Array<String>) {
     println("All outputs will be printed here: \n")
 
-    /**
-     * Abstract Factory pattern
-     */
-    println("ABSTRACT FACTORY \n")
-    println("Chosen type for abstract factory is: $abstractFactoryConcreteType")
-    abstractFactory = when(abstractFactoryConcreteType) {
-        AbstractFactoryVariety.RED -> RedFactory()
-        AbstractFactoryVariety.YELLOW -> YellowFactory()
-    }
-    shop = FruitShop(abstractFactory)
-}
+    val abstractFactoryExecutor = AbstractFactoryExecutor()
+    val proxyExecutor = ProxyExecutor()
 
-enum class AbstractFactoryVariety{
-    RED, YELLOW
+    abstractFactoryExecutor.runExample()
+    proxyExecutor.runExample()
 }
